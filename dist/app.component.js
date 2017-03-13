@@ -16,7 +16,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            styles: ["\n\n    "],
+            styles: ["\n        .navbar .active {\n            color: #ffffff;\n        }\n    "],
             templateUrl: './app/app.component.html'
         }), 
         __metadata('design:paramtypes', [])

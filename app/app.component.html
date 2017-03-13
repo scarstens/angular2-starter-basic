@@ -1,11 +1,14 @@
 <header>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="navbar-header"><a routerLink="/" class="navbar-brand">My Routing App</a></div>
-            <ul class="nav navbar-nav">
-                <li><a routerLink="/" >Home</a></li>
-                <li><a routerLink="/about" >About</a></li>
-                <li><a routerLink="/contact" >Contact</a></li>
+            <div class="navbar-header">
+                <a routerLink="/" class="active navbar-brand"><span class="glyphicon glyphicon-send"></span> Ng App</a>
+            </div>
+            <ul class=" nav navbar-nav">
+                <li><a routerLink="/" routerLinkActive="active"
+                       [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+                <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+                <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
             </ul>
         </div>
     </nav>

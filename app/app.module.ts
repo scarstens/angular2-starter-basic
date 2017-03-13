@@ -6,6 +6,8 @@ import {appRouting} from './app.routing';
 import {HomeComponent} from './home/home.component';
 import {ContactComponent} from './contact/contact.component';
 import {AboutComponent} from './about/about.component';
+import {AboutUserComponent} from './about/about-user.component';
+import {NotFoundComponent} from './404/404.component';
 
 @NgModule({
     imports: [BrowserModule, FormsModule, appRouting],
@@ -13,7 +15,9 @@ import {AboutComponent} from './about/about.component';
         AppComponent,
         HomeComponent,
         ContactComponent,
-        AboutComponent
+        AboutComponent,
+        AboutUserComponent,
+        NotFoundComponent
     ],
     bootstrap: [AppComponent]
 })
