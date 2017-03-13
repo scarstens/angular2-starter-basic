@@ -7,12 +7,15 @@ import {NotFoundComponent} from './404/404.component';
 
 // Order matters in the router, it handles rules from top to bottom.
 const routes: Routes = [
+    // Redirects first
     {
         path: 'contact-us',
         redirectTo: '/contact',
         pathMatch: 'full'
     },
+    // Root Path
     {path: '', component: HomeComponent},
+    // Routes
     {path: 'contact', component: ContactComponent},
     {path: '**', component: NotFoundComponent},
 ];
