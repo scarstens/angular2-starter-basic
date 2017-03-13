@@ -1,44 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-
-export class User {
-    id: Number;
-    name: string;
-    username: string;
-    avatar: string;
-    team: string;
-}
-
-const users: User[] = [
-    {
-        id: 1,
-        name: 'Seth Carstens',
-        username: 'sethcarstens',
-        avatar: 'https://pbs.twimg.com/profile_images/494545489115623424/jg5yrIVq_400x400.jpeg',
-        team: 'FanSided'
-    },
-    {
-        id: 2,
-        name: 'Chris',
-        username: 'sevilayha',
-        avatar: 'https://pbs.twimg.com/profile_images/804421640465580032/aG7EyewO_400x400.jpg',
-        team: 'ScotchIO'
-
-    },
-    {
-        id: 3,
-        name: 'Holly',
-        username: 'hollylawly',
-        avatar: 'https://pbs.twimg.com/profile_images/721918869821005824/2qT_RY5M_400x400.jpg',
-        team: 'ScotchIO'
-    },
-    {
-        id: 4,
-        name: 'Maura Teal',
-        username: 'mlteal',
-        avatar: 'https://pbs.twimg.com/profile_images/462661726891028480/CdlJghsO.jpeg',
-        team: 'FanSided'
-    }
-]
+import { User } from '../shared/models/user';
+import { UserService } from '../shared/services/user.serivce';
 
 @Component({
     moduleId: module.id,
@@ -71,12 +33,13 @@ const users: User[] = [
     // templateUrl: 'name.component.html'
 })
 export class AboutComponent implements OnInit {
-    users: User[] = users;
+    users: User[];
 
-    constructor() {
+    constructor(private service: UserService) {
     }
 
     ngOnInit() {
+        this.service.getUsers().then(users => this.users = users)
     }
 
 }

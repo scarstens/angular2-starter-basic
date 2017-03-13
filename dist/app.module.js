@@ -15,6 +15,7 @@ var home_component_1 = require("./home/home.component");
 var contact_component_1 = require("./contact/contact.component");
 var about_component_1 = require("./about/about.component");
 var about_user_component_1 = require("./about/about-user.component");
+var user_serivce_1 = require("./shared/services/user.serivce");
 var _404_component_1 = require("./404/404.component");
 var AppModule = (function () {
     function AppModule() {
@@ -31,6 +32,9 @@ AppModule = __decorate([
             about_component_1.AboutComponent,
             about_user_component_1.AboutUserComponent,
             _404_component_1.NotFoundComponent
+        ],
+        providers: [
+            user_serivce_1.UserService
         ],
         bootstrap: [app_component_1.AppComponent]
     })

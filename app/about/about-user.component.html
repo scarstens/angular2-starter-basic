@@ -1,7 +1,9 @@
-<div class="jumbotron">
+<a (click)="goBack()" class="btn btn-sm btn-info">Back</a>
+<div class="jumbotron" *ngIf="user">
     <div class="container">
         <h1>{{user.name}}</h1>
         <p>{{user.username}}</p>
+        <img src="{{user.avatar}}" class="img-responsive img-circle">
         <p>
             <a class="btn btn-primary btn-lg" href="http://twitter.com/{{user.username}}">On Twitter</a>
         </p>
