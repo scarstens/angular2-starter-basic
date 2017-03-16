@@ -13,6 +13,10 @@ var routes = [
     },
     // Root Path
     { path: '', component: home_component_1.HomeComponent },
+    {
+        path: 'about',
+        loadChildren: 'app/about/about.module#AboutModule'
+    },
     // Routes
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: '**', component: _404_component_1.NotFoundComponent },

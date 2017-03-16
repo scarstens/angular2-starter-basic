@@ -1,6 +1,5 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-
 import {HomeComponent} from './home/home.component';
 import {ContactComponent} from './contact/contact.component';
 import {NotFoundComponent} from './404/404.component';
@@ -15,6 +14,10 @@ const routes: Routes = [
     },
     // Root Path
     {path: '', component: HomeComponent},
+    {
+        path: 'about',
+        loadChildren: 'app/about/about.module#AboutModule'
+    },
     // Routes
     {path: 'contact', component: ContactComponent},
     {path: '**', component: NotFoundComponent},
