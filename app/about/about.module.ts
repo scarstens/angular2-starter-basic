@@ -4,6 +4,7 @@ import { AboutComponent } from './about.component';
 import { AboutSectionComponent } from './about-section.component';
 import { AboutUserComponent } from './about-user.component';
 import { UserService } from '../shared/services/user.serivce';
+import { AboutUsersResolve } from './about-resolve.service';
 import { AboutRouting } from './about.routing';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AboutRouting } from './about.routing';
         AboutUserComponent,
     ],
     providers: [
-        UserService
+        UserService,
+        AboutUsersResolve
     ],
 })
 export class AboutModule { }
